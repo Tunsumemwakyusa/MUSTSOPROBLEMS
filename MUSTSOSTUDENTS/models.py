@@ -1,8 +1,13 @@
+
 from django.db import models
 
-class Post(models.Model):
- title = models.CharField(max_length=250)
- slug = models.SlugField(max_length=250)
- body = models.TextField()
- def __str__(self):
-  return self.title
+class Problem(models.Model):
+    full_name = models.CharField(max_length=100)
+    college = models.CharField(max_length=100)
+    department = models.CharField(max_length=100)
+    problem_title = models.CharField(max_length=200)
+    image = models.ImageField(upload_to='problems/', blank=True, null=True)
+    comment = models.TextField(blank=True, null=True)
+
+    def __str__(self):
+        return self.problem_title
