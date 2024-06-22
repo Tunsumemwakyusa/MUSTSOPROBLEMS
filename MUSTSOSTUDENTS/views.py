@@ -1,14 +1,19 @@
-
 from django.shortcuts import render
-from django.http import HttpResponse
 from .forms import ProblemForm
+
+def index(request):
+    return render(request, 'index.html')
 
 def home(request):
     if request.method == 'POST':
         form = ProblemForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
-            return HttpResponse('Form submitted successfully')
+            # Handle successful form submission
     else:
         form = ProblemForm()
     return render(request, 'home.html', {'form': form})
+
+
+def aboutus(request):
+    return render(request, 'aboutus.html')
