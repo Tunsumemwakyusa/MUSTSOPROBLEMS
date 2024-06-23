@@ -28,7 +28,7 @@
                     <a class="nav-link" href="{% url 'aboutus' %}">About Us</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Platform</a>
+                    <a class="nav-link" href="{% url 'platform' %}">Platform</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Team</a>
@@ -69,7 +69,7 @@
                 <label for="id_comment">Comment</label>
                 {{ form.comment|add_class:"form-control" }}
             </div>
-            <button type="submit" class="btn btn-primary">Send the Problem</button>
+            <button type="submit" class="btn btn-primary" a href="{% url 'index' %}">Send the Problem</button>
         </form>
     </div>
 

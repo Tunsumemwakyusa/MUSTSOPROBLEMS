@@ -17,11 +17,11 @@ def home(request):
         form = ProblemForm(request.POST, request.FILES)
         if form.is_valid():
 
-            return redirect('home')
+            return redirect('index')
         else:
             form = ProblemForm()
     
-    return render(request,'home.html', {'form': form})
+    return render(request,'index.html', {'form': form})
 
 def index(request):
     if request == 'POST':

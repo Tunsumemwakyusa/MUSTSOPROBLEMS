@@ -17,3 +17,6 @@ def home(request):
 
 def aboutus(request):
     return render(request, 'aboutus.html')
+
+def platform(request):
+    return render(request, 'platform.html')
