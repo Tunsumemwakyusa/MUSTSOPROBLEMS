@@ -7,6 +7,24 @@
     <title>Welcome to MUSTSO</title>
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .justified-text {
+            text-align: justify;
+            line-height: 2.0;
+        }
+        .img-max {
+            width: 100%;
+            max-width: 100%;
+            height: auto; /* Maintain aspect ratio */
+        }
+        .navbar .nav-link {
+            color: #000; /* Set desired color */
+        }
+        .align-image-text {
+            display: flex;
+            align-items: center; /* Align items to the center */
+        }
+    </style>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -26,10 +44,10 @@
                     <a class="nav-link" href="{% url 'platform' %}">Platform</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Team</a>
+                    <a class="nav-link" href="{% url 'team' %}">Team</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Contact Us</a>
+                    <a class="nav-link" href="{% url 'contactus' %}">Contact Us</a>
                 </li>
             </ul>
         </div>
@@ -37,7 +55,24 @@
     <div class="container text-center mt-5">
         <h1>About MUSTSO PROBLEMS</h1>
         <p class="lead">Welcome to MUSTSO Updates problems site</p>
-        <a href="{% url 'home' %}" class="btn btn-primary">Get Started</a>
+    </div>
+    <div class="container mt-5">
+        <section id="about-us">
+            <div class="row align-image-text">
+                <div class="col-md-6">
+                    <img src="{% static 'images/MUSTBUILD.jpg' %}" alt="MUST Building" class="img-max rounded">
+                </div>
+                <div class="col-md-6">
+                    <h4>Student Reporting Platform</h4>
+                    <div class="mt-4 justified-text">
+                        <p>
+                            MUSTSO (Mbeya University of Science and Technology Student Organization) has developed an online platform designed to facilitate the efficient reporting and resolution of student issues. This platform empowers students to promptly report any immediate or ongoing problems they encounter, whether academic, administrative, or related to campus life. By utilizing this digital tool, students can submit their concerns directly through the platform at any time, ensuring that their voices are heard without delay. Once a report is submitted, it is immediately directed to the appropriate department or ministry within the university. This streamlined communication channel ensures that issues are addressed and resolved swiftly, enhancing the overall student experience and fostering a supportive and responsive university environment.
+                        </p>
+                    </div>
+                    <a href="{% url 'home' %}" class="btn btn-primary">Get Started</a>
+                </div>
+            </div>
+        </section>
     </div>
     <!-- Bootstrap JS and dependencies -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

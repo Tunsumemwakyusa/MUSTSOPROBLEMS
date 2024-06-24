@@ -20,3 +20,9 @@ def aboutus(request):
 
 def platform(request):
     return render(request, 'platform.html')
+
+def team(request):
+    return render(request, 'team.html')
+
+def contactus(request):
+    return render(request, 'contactus.html')
